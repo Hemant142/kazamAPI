@@ -1,9 +1,9 @@
-import { configDotenv } from "dotenv";
+import dotenv from "dotenv";
 import redis from "../Config/redis";
 import { Task } from "../Types/task";
 import { fetchAllFrmMongo } from "../Services/mongoService";
 import { Request, Response } from "express";
-configDotenv();
+dotenv.config();
 
 const REDI_KEY = process.env.REDIS_KEY || "FULLSTACK_TASK_HEMANT";
 
