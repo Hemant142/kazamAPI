@@ -15,7 +15,7 @@ const io = new SocketIOServer(server, {
 setupSocket(io);
 const port = process.env.PORT || 8080;
 
-server.listen(port, async () => {
+server.listen(port, () => {
   connection();
   console.log(`Server is running on port ${port}`);
 });
