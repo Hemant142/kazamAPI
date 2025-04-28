@@ -13,7 +13,7 @@ const io = new SocketIOServer(server, {
   },
 });
 setupSocket(io);
-const PORT = process.env.PORT || 9890;
+const PORT = process.env.PORT || 8080;
 
 server.listen(PORT, async () => {
   connection();
