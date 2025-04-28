@@ -1,11 +1,11 @@
 import http from "http";
 import { Server as SocketIOServer } from "socket.io";
-import dotenv from "dotenv";
+import { configDotenv } from "dotenv";
 import app from "./app";
 import connection from "./Config/db";
 import { setupSocket } from "./Sockets";
-dotenv.config();
 
+configDotenv();
 const server = http.createServer(app);
 const io = new SocketIOServer(server, {
   cors: {
@@ -13,7 +13,7 @@ const io = new SocketIOServer(server, {
   },
 });
 setupSocket(io);
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 9890;
 
 server.listen(PORT, async () => {
   connection();

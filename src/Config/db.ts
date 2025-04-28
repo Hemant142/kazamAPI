@@ -1,6 +1,7 @@
-import dotenv from "dotenv";
-dotenv.config();
 import mongoose from "mongoose";
+import { configDotenv } from "dotenv";
+configDotenv();
+
 const MONGO_URL = process.env.MONGO_URL || "";
 const MONGO_DB = process.env.MONGO_DB || "assignment_Kazam";
 
